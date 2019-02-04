@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="https://user-images.githubusercontent.com/45159366/51893756-b14aaa00-235a-11e9-8aa3-11f39990f3a0.png">
+  <img src="https://user-images.githubusercontent.com/45159366/52196611-56f59180-2811-11e9-94f6-d70a330d0c52.png">
   <br />
-  OpenStack-Ansible
+ ClassyShark
 </h1>
 
-<p align="center"><b>This is the snap for OpenStack-Ansible, Ansible playbooks for deploying OpenStack. It works on Ubuntu, Fedora, Debian, and other major Linux distributions. </p>
+<p align="center"><b>This is the snap for ClassyShark, is a standalone binary inspection tool for Android developers. It works on Ubuntu, Fedora, Debian, and other major Linux distributions. </p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
@@ -12,15 +12,14 @@
 </p>
 -->
 
-<!-- Uncomment and modify this when you have a screenshot
-![my-snap-name](screenshot.png?raw=true "my-snap-name")
--->
+
+![my-snap-name](https://user-images.githubusercontent.com/45159366/52196733-ca979e80-2811-11e9-8c06-24ce018a8922.png?raw=true "my-snap-name")
 
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters</p>
 
 ## Install
 
-    sudo snap install openstack-ansible
+    sudo snap install classyshark
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
