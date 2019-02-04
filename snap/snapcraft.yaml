@@ -1,0 +1,40 @@
+name: openstack-ansible
+summary: OpenStack-Ansible, Ansible playbooks for deploying OpenStack.
+description: 
+  
+adopt-info: devmode # use 'strict' once you have the right plugs and slots
+
+grade: stable
+confinement: devmode
+
+architectures:
+  - build-on: amd64
+  - build-on: armhf
+  - build-on: arm64
+
+apps:
+  openstack-ansible:
+    command: openstack-ansible
+    plugs:
+      - network
+
+parts:
+  openstack-ansible:
+    plugin: 
+    source: https://github.com/openstack/openstack-ansible.git
+    source-type: git
+    override-pull: |
+      snapcraftctl pull
+      last_committed_tag="$(git describe --tags --abbrev=0)"
+      last_committed_tag_ver="$(echo ${last_committed_tag} | sed 's/v//')"
+      last_released_tag="$(snap info wethr | awk '$1 == "beta:" { print $2 }')"
+      # If the latest tag from the upstream project has not been released to
+      # beta, build that tag instead of master.
+      if [ "${last_committed_tag_ver}" != "${last_released_tag}" ]; then
+        git fetch
+        git checkout "${last_committed_tag}"
+      fi
+      snapcraftctl set-version "$(git describe --tags | sed 's/v//')"
+    build-packages:
+      - git
+      - sed
