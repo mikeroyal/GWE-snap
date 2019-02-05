@@ -1,6 +1,6 @@
-name: classyshark
-summary: ClassyShark, is a standalone binary inspection tool for Android developers.
-description: 
+name: gwe
+summary: 
+description: GWE, is a system utility designed to provide information, control the fans and overclock your NVIDIA card.
   
 adopt-info: devmode # use 'strict' once you have the right plugs and slots
 
@@ -13,15 +13,15 @@ architectures:
   - build-on: arm64
 
 apps:
-  classyshark:
-    command: classyshark
+  gwe:
+    command: gwe
     plugs:
       - network
 
 parts:
-  classyshark:
+ gwe:
     plugin: 
-    source: https://github.com/google/android-classyshark.git
+    source: https://gitlab.com/leinardi/gwe.git
     source-type: git
     override-pull: |
       snapcraftctl pull
