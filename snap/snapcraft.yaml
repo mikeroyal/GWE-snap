@@ -1,5 +1,5 @@
-name: openstack-ansible
-summary: OpenStack-Ansible, Ansible playbooks for deploying OpenStack.
+name: classyshark
+summary: ClassyShark, is a standalone binary inspection tool for Android developers.
 description: 
   
 adopt-info: devmode # use 'strict' once you have the right plugs and slots
@@ -13,15 +13,15 @@ architectures:
   - build-on: arm64
 
 apps:
-  openstack-ansible:
-    command: openstack-ansible
+  classyshark:
+    command: classyshark
     plugs:
       - network
 
 parts:
-  openstack-ansible:
+  classyshark:
     plugin: 
-    source: https://github.com/openstack/openstack-ansible.git
+    source: https://github.com/google/android-classyshark.git
     source-type: git
     override-pull: |
       snapcraftctl pull
