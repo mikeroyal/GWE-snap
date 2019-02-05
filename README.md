@@ -1,10 +1,10 @@
 <h1 align="center">
-  <img src="https://user-images.githubusercontent.com/45159366/52196611-56f59180-2811-11e9-94f6-d70a330d0c52.png">
+  <img src="https://user-images.githubusercontent.com/45159366/52268734-2127da00-28f1-11e9-823d-8213a6ab80a3.png">
   <br />
- ClassyShark
+ GreenWithEnvy (GWE)
 </h1>
 
-<p align="center"><b>This is the snap for ClassyShark, is a standalone binary inspection tool for Android developers. It works on Ubuntu, Fedora, Debian, and other major Linux distributions. </p>
+<p align="center"><b>This is the snap for GWE, a GTK system utility designed to provide information, control the fans and overclock your NVIDIA video card and graphics processor.It works on Ubuntu, Fedora, Debian, and other major Linux distributions. </p>
 
 <!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
@@ -13,13 +13,13 @@
 -->
 
 
-![my-snap-name](https://user-images.githubusercontent.com/45159366/52196733-ca979e80-2811-11e9-8c06-24ce018a8922.png?raw=true "my-snap-name")
+![my-snap-name](https://user-images.githubusercontent.com/45159366/52268544-ac54a000-28f0-11e9-95ff-e6a1c42d7aa1.png?raw=true "my-snap-name")
 
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters</p>
 
 ## Install
 
-    sudo snap install classyshark
+    sudo snap install gwe
 
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
