@@ -1,6 +1,7 @@
 name: gwe
-summary: 
-description: GWE, is a system utility designed to provide information, control the fans and overclock your NVIDIA card.
+version: 0.12.3
+summary: System uility.
+description: A system utility designed to provide information, control the fans and overclock your NVIDIA card.
   
 adopt-info: devmode # use 'strict' once you have the right plugs and slots
 
@@ -16,18 +17,23 @@ apps:
   gwe:
     command: gwe
     plugs:
+      - home
       - network
+      - removable-media
+      - opengl
 
 parts:
  gwe:
-    plugin: 
+    plugin: python
+    python-version: python3
     source: https://gitlab.com/leinardi/gwe.git
     source-type: git
     override-pull: |
-      snapcraftctl pull
+      git clone https://gitlab.com/leinardi/gwe.git src/gitlab.com/leinardi/gwe
+       cd src/gitlab.com/leinardi/gwe
       last_committed_tag="$(git describe --tags --abbrev=0)"
       last_committed_tag_ver="$(echo ${last_committed_tag} | sed 's/v//')"
-      last_released_tag="$(snap info wethr | awk '$1 == "beta:" { print $2 }')"
+      last_released_tag="$(snap info $SNAPCRAFT_PROJECT_NAME | awk '$1 == "beta:" { print $2 }')"
       # If the latest tag from the upstream project has not been released to
       # beta, build that tag instead of master.
       if [ "${last_committed_tag_ver}" != "${last_released_tag}" ]; then
@@ -35,6 +41,10 @@ parts:
         git checkout "${last_committed_tag}"
       fi
       snapcraftctl set-version "$(git describe --tags | sed 's/v//')"
+      override-build: |
+      snapcraftctl set-version "$(git describe --tags | sed 's/v//')"
     build-packages:
       - git
       - sed
+    stage-packages:
+      - python-six 
