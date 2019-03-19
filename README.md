@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://user-images.githubusercontent.com/45159366/52268734-2127da00-28f1-11e9-823d-8213a6ab80a3.png">
+  <img src="https://user-images.githubusercontent.com/45159366/54575003-b9fd4b00-49af-11e9-8352-2a4a931be153.png">
   <br />
  GreenWithEnvy (GWE)
 </h1>
