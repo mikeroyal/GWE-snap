@@ -1,16 +1,15 @@
 name: gwe
-version: 0.12.3
+version: '0.12.3'
 summary: System uility.
 description: A system utility designed to provide information, control the fans and overclock your NVIDIA card.
 
 
 grade: stable
 confinement: devmode
+base: core18
 
 architectures:
   - build-on: amd64
-  - build-on: armhf
-  - build-on: arm64
 
 plugs:
   gnome-3-32-1804:
